@@ -10,8 +10,7 @@ public class Main {
 
         edgeNode.sendData(5);
 
-        CloudServer.ShowData();
+        cloudServer.showData();
         System.out.println("Alertas detectadas en FOG: "+ fogNode.getAlertCount());
-
     }
 }
