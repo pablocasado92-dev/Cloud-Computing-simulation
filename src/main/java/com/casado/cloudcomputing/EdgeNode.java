@@ -2,10 +2,16 @@ package com.casado.cloudcomputing;
 
 public class EdgeNode {
     private final FogNode fogNode;
+    private int id;
 
 
-    public EdgeNode(FogNode fogNode){
+    public EdgeNode(FogNode fogNode, int id){
         this.fogNode = fogNode;
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public void sendData(int totalReadings){

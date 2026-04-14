@@ -3,9 +3,14 @@ package com.casado.cloudcomputing;
 public class FogNode {
     private final CloudServer CLOUDSERVER;
     private int alertCount;
+    private int id;
 
-    public FogNode (CloudServer cloudServer){
+    public FogNode (CloudServer cloudServer, int id){
         this.CLOUDSERVER = cloudServer;
+        this.id = id;
+    }
+    public int getId() {
+        return id;
     }
 
     public void processData(SensorData data){
