@@ -17,7 +17,7 @@ public class FogNode {
         
         System.out.println("[FOG] Dato recibido: " + data);
 
-        if(data.getTEMPERATURE()>20){
+        if(data.getTEMPERATURE()>30){
             alertCount++;
             System.out.println("[FOG] ALERTA: temperatura alta");
         } else
