@@ -22,10 +22,13 @@ public class Main {
         System.out.print("Introduce el número de lecturas por cada Edge: ");
         numLecturas = sc.nextInt();
 
-        // Bucle para que cada Edge tome numLecturas temperaturas
-        for (int i = 0; i < NUM_NODES; i++) {
-            for (int j = 0; j < NUM_NODES; j++) {
-                edgeNodes[i][j].sendData(numLecturas);
+        // Bucle por rondas: en cada ronda cada Edge toma 1 lectura
+        for (int r = 1; r <= numLecturas; r++) {
+            System.out.println("\n--- Ronda " + r + " de " + numLecturas + " ---");
+            for (int i = 0; i < NUM_NODES; i++) {
+                for (int j = 0; j < NUM_NODES; j++) {
+                    edgeNodes[i][j].sendData(1);
+                }
             }
         }
 
